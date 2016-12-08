@@ -37,3 +37,11 @@ $('#footer-slider').slick({
             // instead of a settings object
         ]
     });
+$('.slider-hor').slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    dots: true,
+    autoplay: false
+    //autoplaySpeed: 3000
+});
