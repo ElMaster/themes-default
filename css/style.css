@@ -44,7 +44,9 @@ a:focus {
 a:focus {
     outline: none;
 }
-
+.fbold {
+    font-weight: bold;
+}
 .main-content p {text-align: justify;}
 @media (max-width: 767px) {
     .text-center-xs {
@@ -388,6 +390,29 @@ a[rel=tooltip] {
 .table-noborder td,
 .table-noborder th {
     border: 0!important;
+}
+table.col2 td {
+    width: 50%;
+}
+.table-bordered {
+    border: 1px solid #ddd;
+    border-collapse: separate;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+    border: 1px solid #dddddd;
+}
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: #f9f9f9;
 }
 
 .table-call {
@@ -917,6 +942,16 @@ ul.advantage >li > span {font-size: 14px;margin-right: 8px;}
     text-transform: none;
     color: #000;
 }
+
+
+.nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.nav-tabs > li > a {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
 /*----------------------END-MAIN-------*/
 
 /*-------------------------BLOCS-------*/
@@ -1049,6 +1084,23 @@ ul.advantage >li > span {font-size: 14px;margin-right: 8px;}
     margin: 10px 0 50px 0;
     padding: 0 50px;
 }
+.CONTENT-SLIDER {
+    margin: 0 0 20px 0;
+    padding: 10px 30px 0;
+}
+.CONTENT-SLIDER .slick-slide {
+    padding: 0 1px;
+}
+.CONTENT-SLIDER .slick-slide a {
+    margin: 0 auto;
+    display: block;
+    max-width: 200px;
+}
+@media (max-width: 767px) {
+    .MAIN-SLIDER {
+        padding: 0 30px;
+    }
+}
 .MAIN-SLIDER .img-pane {
     padding: 5px;
     border: 1px solid #ddd;
@@ -1067,10 +1119,11 @@ ul.advantage >li > span {font-size: 14px;margin-right: 8px;}
     margin-top: 5px;
 }
 
-.MAIN-SLIDER .slick-prev, .MAIN-SLIDER .slick-next {
-
+.MAIN-SLIDER .slick-prev,
+.MAIN-SLIDER .slick-next,
+.CONTENT-SLIDER .slick-next,
+.CONTENT-SLIDER .slick-prev {
     top: 50%;
-
 }
 .MAIN-SLIDER .slick-prev {
     left: -35px;
@@ -1078,6 +1131,24 @@ ul.advantage >li > span {font-size: 14px;margin-right: 8px;}
 .MAIN-SLIDER .slick-next {
     right: -35px;
 }
+.CONTENT-SLIDER .slick-prev {
+    left: -35px;
+}
+.CONTENT-SLIDER .slick-next {
+    right: -35px;
+}
+
+.CONTENT-LICENSE ul li{
+    padding: 10px;
+    display: inline-block;
+    font-size: 0;
+}
+@media (max-width: 767px) {
+    .CONTENT-LICENSE ul li{
+        padding: 5px;
+    }
+}
+
 
 .help-slider-pane-bottom {
     top: 50px;
