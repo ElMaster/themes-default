@@ -54,6 +54,9 @@ a:focus {
     width: 1px;
     font-size: 0;
 }
+.text-trea {
+    text-transform: uppercase;
+}
 .main-content p {text-align: justify;}
 @media (max-width: 767px) {
     .text-center-xs {
@@ -867,6 +870,8 @@ table.col2 td {
     display: block;
     margin-top: 20px;
 }
+
+
 /*---------------------------------END-BANNER-------*/
 
 /*--------------------------------CENTER-MENU-------*/
@@ -938,6 +943,23 @@ ul.center-menu > li.active > a {
 .sidebar ul > li > a:hover {background-color: #dbb2eb;color:#fff; }
 .sidebar ul > li > a .tm {font-size: 16px;margin-left: 5px;}
 
+.sidebar-desc-block {
+
+}
+.sidebar-desc-block ul {
+    font-size: 14px;
+
+}
+.sidebar-desc-block ul li {
+    margin-bottom: 5px;
+}
+.sidebar-desc-block .menu-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d7d4d9;
+    padding-bottom: 10px;
+}
 
 /*---------------------END-SLIDEBAR-------*/
 
@@ -1037,8 +1059,9 @@ ul.advantage >li > span {font-size: 14px;margin-right: 8px;}
 
 .breadcrumb {
     background-color: transparent;
-    padding: 0px 15px;
+    /*padding: 0px 15px;*/
     padding-left: 0;
+    border-bottom: 1px solid #eee;
 
 }
 .breadcrumb li a {
