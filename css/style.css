@@ -1237,7 +1237,7 @@ ul.advantage >li > span {font-size: 14px;margin-right: 8px;}
 .MAIN-SLIDER .slick-next,
 .CONTENT-SLIDER .slick-next,
 .CONTENT-SLIDER .slick-prev {
-    top: 50%;
+    top: 35%;
 }
 .MAIN-SLIDER .slick-prev {
     left: -35px;
