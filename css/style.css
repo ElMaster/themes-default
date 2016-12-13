@@ -57,6 +57,9 @@ a:focus {
 .text-trea {
     text-transform: uppercase;
 }
+.ash3 {
+    font-size: 19px;
+}
 .main-content p {text-align: justify;}
 @media (max-width: 767px) {
     .text-center-xs {
@@ -392,11 +395,11 @@ a:focus {
 .notextshadow {
     text-shadow: none!important;
 }
-input[type="radio"],
-input[type="checkbox"] {
-    margin: 0 4px 0 0;
-    margin-top: 1px \9;
-}
+/*input[type="radio"],*/
+/*input[type="checkbox"] {*/
+    /*margin: 0 4px 0 0;*/
+    /*margin-top: 1px \9;*/
+/*}*/
 a[rel=tooltip] {
     text-decoration: none;
 }
@@ -1325,6 +1328,25 @@ ul.advantage >li > span {font-size: 14px;margin-right: 8px;}
     display: inline-block;
     vertical-align: baseline;
     margin-right: 1px;
+}
+
+
+.MODAL-slider {
+    background-color: #f3f3f3;
+    -webkit-box-shadow: 0px 2px 2px rgba(50, 50, 50, 0.48);
+    -moz-box-shadow: 0px 2px 2px rgba(50, 50, 50, 0.48);
+    box-shadow: 0px 2px 2px rgba(50, 50, 50, 0.48);
+}
+.MODAL-slider .help-slider-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #fff;
+
+    color: #6a3e7b;
+
+}
+.MODAL-slider .modal-header {
+
 }
 
 

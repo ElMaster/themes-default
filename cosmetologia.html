@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
 
     <link rel="stylesheet" href="js/slick/slick.css">
-    <link rel="stylesheet" href="css/style.css?version=6" type="text/css">
-
+    <link rel="stylesheet" href="css/style.css?version=7" type="text/css">
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -52,7 +52,7 @@
                                 class="frauklinik_call_phone_hide_1">+7 (495) 532-47-62</span>
                         </div>
                         <div class="online-btn-holder">
-                            <a href="#" class="online-btn help-slider-button" data-target="#online-form-place-top">Онлайн-заявка</a>
+                            <a href="#" class="online-btn help-slider-button"  data-toggle="modal" data-target="#myModal">Онлайн-заявка</a>
                             <div id="online-form-place-top"></div>
                         </div>
                     </div>
@@ -757,14 +757,110 @@
             </div>
         </div>
     </footer>
-</div>
 
+
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content MODAL-slider">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="help-slider-title">Онлайн заявка на прием</div>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post" id="id_help_slider_form">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <p><input id="_datetimepicker3" type="text" /></p>
+
+
+                            <button type="submit" class="btn btn-brown">
+                                Отправить
+                            </button>
+                        </div>
+                        <div class="col-sm-5">
+                            <strong>Отделение:</strong>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="otdelenie" id="optionsRadios1" value="option1" checked>
+                                    Пластическая хирургия
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="otdelenie" id="optionsRadios2" value="option2">
+                                    Гинекология
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="otdelenie" id="optionsRadios3" value="option1" checked>
+                                    Гинекология
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="otdelenie" id="optionsRadios4" value="option2">
+                                    Маммология
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="otdelenie" id="optionsRadios5" value="option1" checked>
+                                    Дерматология
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="otdelenie" id="optionsRadios6" value="option2">
+                                    Стоматология
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="id_name_date">Ваше имя:</label>
+                                <input type="text" id="id_name_date" class="form-control" name="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="id_pone_date">Телефон (обязательное поле):</label>
+                                <input type="text" id="id_pone_date" class="form-control" name="phone">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.datetimepicker.full.min.js"></script>
 <script src="js/slick/slick.min.js?v=4"></script>
-<script src="js/main.js?v=4"></script>
+<script src="js/main.js?v=5"></script>
+<script type="text/javascript">// <![CDATA[
+jQuery.datetimepicker.setLocale('ru');
+jQuery(function(){
+    jQuery('#_datetimepicker3').datetimepicker({
+        defaultDate:new Date(),
+        format:'d.m.Y H:i',
+        inline:true,
+        lang:'ru',
+
+        allowTimes:[
+            '08:00', '09:00', '10:00',
+            '11:00', '12:05', '13:20', '14:00', '15:00','16:00','17:00','18:00','19:00'
+        ]
+    });
+});
+// ]]></script>
 </body>
 </html>

@@ -71,7 +71,14 @@
         return this;
     };
 })(jQuery);
-
+function collapsElement(id) {
+    if ( document.getElementById(id).style.display != "none" ) {
+        document.getElementById(id).style.display = 'none';
+    }
+    else {
+        document.getElementById(id).style.display = '';
+    }
+}
 
 $(document).ready(function() {
     $('#top-slider').slick({
@@ -166,4 +173,9 @@ $(document).ready(function() {
     //     fade: true
     // })
     $("#context_hints").context_hints({auto:7000});
+
+
+
+  
+
 });
