@@ -168,14 +168,50 @@ $(document).ready(function() {
         });
     }
 
-    // $(".CONTEXT-st").slick({
-    //     speed: 0,
-    //     fade: true
-    // })
+   
     $("#context_hints").context_hints({auto:7000});
 
+    jQuery.datetimepicker.setLocale('ru');
 
 
-  
+    $('#myModal').on('shown.bs.modal', function () {
+        if ($(window).width() <= '767') {
+            jQuery(function () {
+                jQuery('#_datetimepicker3').datetimepicker({
+                    defaultDate: new Date(),
+                    format: 'd.m.Y H:i',
+                    inline: true,
+                    lang: 'ru',
+                    timepicker: false,
+                    allowTimes: [
+                        '08:00', '09:00', '10:00',
+                        '11:00', '12:05', '13:20', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'
+                    ]
+                });
+            });
+            return this;
+        }
+        else {
+            jQuery(function () {
+                jQuery('#_datetimepicker3').datetimepicker({
+                    defaultDate: new Date(),
+                    format: 'd.m.Y H:i',
+                    inline: true,
+                    lang: 'ru',
 
+                    allowTimes: [
+                        '08:00', '09:00', '10:00',
+                        '11:00', '12:05', '13:20', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'
+                    ]
+                });
+            });
+        }
+    })
+    $('.open-popover-modal').on('click', function () {
+        $($(this).data('target')).show();
+        
+    })
+    $('.popover-modal').find('.close').on('click', function () {
+        $('.popover-modal').hide();
+    })
 });

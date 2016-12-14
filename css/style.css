@@ -1056,6 +1056,28 @@ ul.advantage >li > span {font-size: 14px;margin-right: 8px;}
     background-color: #fff;
     border: 1px solid #ddd;
 }
+
+.panel-answer {
+    background: #6a3e7b;
+    padding: 20px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.panel-answer:before {
+    content: '';
+    position: absolute;
+    left: 5%;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+
+    border: 10px solid transparent;
+    bottom: auto;
+    top: -20px;
+    border-color: transparent transparent #6a3e7b transparent;
+}
 /*----------------------END-MAIN-------*/
 
 /*-------------------------BLOCS-------*/
@@ -1194,6 +1216,31 @@ ul.advantage >li > span {font-size: 14px;margin-right: 8px;}
 }
 .specialist-slider .slick-slider .slick-arrow {
     top: 33%;
+}
+
+/* accordion */
+.panel-heading {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.panel-heading .panel-title {
+    padding-top:    10px;
+    padding-bottom: 10px;
+}
+.panel-heading:hover {
+    opacity: 0.9;
+}
+.panel-heading span {
+    color: #a9a9a9;
+}
+.panel-heading .panel-title i.fa-plus {
+    display: none;
+}
+.panel-heading .panel-title.collapsed i.fa-minus {
+    display: none;
+}
+.panel-heading .panel-title.collapsed i.fa-plus {
+    display: block;
 }
 
 /*MAIN-SLIDER*/
@@ -1349,6 +1396,24 @@ ul.advantage >li > span {font-size: 14px;margin-right: 8px;}
 
 }
 
+
+.popover-modal {
+
+    right: 0;
+    bottom: 30px;
+    left: inherit;
+    top: inherit;
+}
+.popover-modal .close {
+    position: relative;
+    top: -4px;
+}
+
+
+.panel-comment .panel-user,
+.panel-answer .panel-user{
+    font-style: italic;
+}
 
 .help-slider-pane-bottom {
     top: 50px;
